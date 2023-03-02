@@ -33,7 +33,7 @@ class CompteBancaire:
 	def agios(self):
 		agios = 5
 		if self.__solde < 0:
-			self.__solde =  self.__solde - (self.__solde * agios / 100)
+			self.__solde = self.__solde - (self.__solde * agios / 100)
 			return self.__solde
 
 	def virement(self, Recepteur, montant):
@@ -53,15 +53,15 @@ class CompteBancaire:
 Lucas = CompteBancaire(2551120, "Lucas", "Fabre", 920, 1)
 print(Lucas.afficher())
 
-print("Lucas :",Lucas.afficherSolde())
+print("Lucas :", Lucas.afficherSolde())
 
-print("Lucas :",Lucas.retrait(1150))
+print("Lucas :", Lucas.retrait(1150))
 
-print("Lucas :",Lucas.versement(2200))
+print("Lucas :", Lucas.versement(2200))
 
 Matthieu = CompteBancaire(251220, "Matthieu", "Geley", -250, 1)
 print("Matthieu :", Matthieu.agios())
 
-print("Lucas :",Lucas.virement(Matthieu, 300))
-print("Lucas :",Lucas.afficherSolde())
-print("Matthieu :",Matthieu.afficherSolde())
+print("Lucas :", Lucas.virement(Matthieu, 300))
+print("Lucas :", Lucas.afficherSolde())
+print("Matthieu :", Matthieu.afficherSolde())
